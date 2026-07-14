@@ -32,6 +32,23 @@ function normalizeImagePath(value: string | undefined) {
   return '/' + path.replace(/^\.\//, '');
 }
 
+function normalizeStickyValue(...values: unknown[]): boolean | number | undefined {
+  const value = values.find(
+    (item) => item !== undefined && item !== null && String(item).trim() !== '',
+  );
+
+  if (typeof value === 'boolean') return value;
+  if (typeof value === 'number') return Number.isFinite(value) && value > 0 ? value : false;
+  if (typeof value !== 'string') return undefined;
+
+  const normalized = value.trim().toLowerCase();
+  if (normalized === 'true') return true;
+  if (normalized === 'false' || normalized === '0') return false;
+
+  const priority = Number(normalized);
+  return Number.isFinite(priority) && priority > 0 ? priority : undefined;
+}
+
 export function normalizeArticleFrontmatter(value: unknown): unknown {
   if (!isRecord(value)) return value;
 
@@ -52,9 +69,9 @@ export function normalizeArticleFrontmatter(value: unknown): unknown {
 
   if (heroImage) normalized.heroImage = heroImage;
   else delete normalized.heroImage;
-  if (normalized.sticky === undefined && normalized.top !== undefined) {
-    normalized.sticky = normalized.top;
-  }
+  const sticky = normalizeStickyValue(normalized.sticky, normalized.top);
+  if (sticky === undefined) delete normalized.sticky;
+  else normalized.sticky = sticky;
 
   return normalized;
 }
