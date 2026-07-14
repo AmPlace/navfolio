@@ -190,7 +190,7 @@ const navigationItemSchema = z.object({
 const homeLinkSchema = z.object({
   label: z.string(),
   icon: z.string(),
-  tooltip: z.string().trim(),
+  tooltip: z.string().trim().default(''),
   copy: z.boolean(),
 });
 
