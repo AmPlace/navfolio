@@ -8,20 +8,13 @@ repository = "https://github.com/AmPlace/navfolio"
 footerNote = "Released as an open-source starter."
 
 [config.theme]
-# 可用色盘：
-# green-soft, green-vivid, rose-soft, pink-soft, purple-soft, blue-soft, orange-soft, brown-soft
 palette = "green-soft"
-# 原生 UI 语言。可用值：en、zh-CN、zh-TW。未知值会回退到 en。
-lang = "en"
+lang = "zh-CN"
 
 [config.fonts]
-# 英文与代码感 UI 字体
 en = "Maple Mono"
 code = "Monaco"
-# 模板内可直接选择：ChillRoundM、LXGW WenKai
-# 中文阅读字体
 zh = "ChillRoundM"
-# 中文完整字体文件
 file = "/fonts/ChillRoundM.ttf"
 
 [config.code]
@@ -33,56 +26,12 @@ preserveIndent = true
 collapseStyle = "collapsible-auto"
 
 [config.math]
-render = "katex" # "katex" | "mathjax"
+render = "katex"
 
 [config.comments]
 enabled = false
 provider = "none"
 show_on_posts = true
-
-[config.search]
-enabled = true
-shortcut = "mod+k"
-placeholder = "Search notes..."
-maxResults = 6
-
-[config.pages.blog]
-title = "Writing notes"
-kicker = "Notebook archive"
-subtitle = "Notes from the margins."
-note = "Field notes, drafts, and technical margins arranged for slow browsing."
-postsPerPage = 6
-# date-fns 使用的日期格式模板。
-dateFormat = "yyyy-MM-dd"
-# 元信息分隔符。可以使用 "|"、"/" 等符号，也可以使用特殊值 "icon"。
-metadataSeparator = "icon"
-# 文章列表封面样式："card" 保留带边框的缩略图，"mask" 会将图片融合到右侧。
-coverImageStyle = "mask"
-
-[config.pages.blog.categories]
-title = "Categories"
-kicker = "Browse notes"
-subtitle = ""
-note = "A quiet index of recurring topics, gathered from article frontmatter."
-
-[config.pages.blog.series]
-title = "Series"
-kicker = "Reading paths"
-subtitle = ""
-note = "Connected notes that can be followed in the order they were written."
-
-[config.pages.projects]
-title = "Projects"
-kicker = "Project shelf"
-subtitle = "Small tools and site systems."
-note = "A compact shelf for implementation choices, releases, and publishing experiments."
-
-[config.pages.vibe]
-title = "vibe"
-kicker = ""
-subtitle = "Life and coding fragments."
-note = "Not formal enough for blog posts, but still part of the story."
-showTrail = true
 
 [config.comments.giscus]
 repo = ""
@@ -111,6 +60,47 @@ lang = "zh-CN"
 dark = "html.dark"
 pageview = true
 comment = true
+
+[config.search]
+enabled = true
+shortcut = "mod+k"
+placeholder = "Search notes..."
+maxResults = 6
+
+[config.pages.blog]
+title = "Writing notes"
+kicker = "Notebook archive"
+subtitle = "Notes from the margins."
+note = "Field notes, drafts, and technical margins arranged for slow browsing."
+postsPerPage = 6
+dateFormat = "yyyy-MM-dd"
+metadataSeparator = "icon"
+coverImageStyle = "mask"
+
+[config.pages.blog.categories]
+title = "Categories"
+kicker = "Browse notes"
+subtitle = ""
+note = "A quiet index of recurring topics, gathered from article frontmatter."
+
+[config.pages.blog.series]
+title = "Series"
+kicker = "Reading paths"
+subtitle = ""
+note = "Connected notes that can be followed in the order they were written."
+
+[config.pages.projects]
+title = "Projects"
+kicker = "Project shelf"
+subtitle = "Small tools and site systems."
+note = "A compact shelf for implementation choices, releases, and publishing experiments."
+
+[config.pages.vibe]
+title = "vibe"
+kicker = ""
+subtitle = "Life and coding fragments."
+note = "Not formal enough for blog posts, but still part of the story."
+showTrail = true
 
 [config.profile]
 name = "navfolio"
@@ -141,26 +131,13 @@ module = "vibe"
 label = "About"
 href = "/about"
 
-[config.home]
-
 [config.home.quote]
-text = [
-  "Navigate your world,",
-  "Showcase your story,",
-  "and keep everything in one place.",
-]
+text = [ "Navigate your world,", "Showcase your story,", "and keep everything in one place." ]
 
 [config.home.intro]
 title = "here is navfolio"
 name = "navfolio"
-body = [
-  "The name combines \"Navigation\" and \"Portfolio\".",
-  "Navfolio prioritizes lightweight organization, seamless reading, and developer-friendly aesthetics.",
-  "It’s less a resume than a personal OS for your ideas, projects, notes, and online presence.",
-  "这个名字融合了“导航”与“作品集”。",
-  "Navfolio 专注于轻量级组织、流畅的阅读体验，以及对开发者友好的美学设计。",
-  "它不像一份简历，更像是一个属于你自己的个人操作系统——承载想法、项目、笔记与网络足迹。",
-]
+body = [ "The name combines \"Navigation\" and \"Portfolio\".", "Navfolio prioritizes lightweight organization, seamless reading, and developer-friendly aesthetics.", "It’s less a resume than a personal OS for your ideas, projects, notes, and online presence.", "这个名字融合了“导航”与“作品集”。", "Navfolio 专注于轻量级组织、流畅的阅读体验，以及对开发者友好的美学设计。", "它不像一份简历，更像是一个属于你自己的个人操作系统——承载想法、项目、笔记与网络足迹。" ]
 
 [config.home.latest]
 count = 1
@@ -209,7 +186,7 @@ copy = false
 [[config.home.links]]
 label = "X"
 icon = "x"
-tooltip = "" # 留空会隐藏这个链接项。
+tooltip = ""
 copy = false
 
 [[config.home.links]]
