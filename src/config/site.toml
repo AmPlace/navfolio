@@ -1,9 +1,9 @@
 [config.site]
-title = "navfolio"
+title = "AmPlex"
 description = "A personal navigation portfolio starter built with Astro."
-pageTitle = "navfolio | Digital Publication Space"
+pageTitle = "AmPlex | Digital Publication Space"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
-url = "https://astro.navfolio.site"
+url = "https://add.gs"
 repository = "https://github.com/AmPlace/navfolio"
 footerNote = "Released as an open-source starter."
 
@@ -34,10 +34,6 @@ provider = "none"
 show_on_posts = true
 
 [config.comments.giscus]
-repo = ""
-repo_id = ""
-category = ""
-category_id = ""
 mapping = "pathname"
 strict = "0"
 reactions_enabled = "1"
@@ -49,13 +45,11 @@ lang = "zh-CN"
 loading = "lazy"
 
 [config.comments.utterances]
-repo = ""
 issue_term = "pathname"
 label = "comment"
 theme = "github-light"
 
 [config.comments.waline]
-server_url = ""
 lang = "zh-CN"
 dark = "html.dark"
 pageview = true
@@ -80,13 +74,11 @@ coverImageStyle = "mask"
 [config.pages.blog.categories]
 title = "Categories"
 kicker = "Browse notes"
-subtitle = ""
 note = "A quiet index of recurring topics, gathered from article frontmatter."
 
 [config.pages.blog.series]
 title = "Series"
 kicker = "Reading paths"
-subtitle = ""
 note = "Connected notes that can be followed in the order they were written."
 
 [config.pages.projects]
@@ -97,14 +89,13 @@ note = "A compact shelf for implementation choices, releases, and publishing exp
 
 [config.pages.vibe]
 title = "vibe"
-kicker = ""
 subtitle = "Life and coding fragments."
 note = "Not formal enough for blog posts, but still part of the story."
 showTrail = true
 
 [config.profile]
-name = "navfolio"
-handle = "@navfolio"
+name = "AmPlex"
+handle = "@AmPlex"
 role = "A Cat Developer"
 email = "hello@navfolio.site"
 website = "https://astro.navfolio.site/"
@@ -144,8 +135,6 @@ count = 1
 heatmapWeeks = 24
 showHeatmapLatest = true
 excludeDraft = true
-startDate = ""
-dateArchiveBaseHref = ""
 
 [[config.home.navigation]]
 icon = "compass"
@@ -186,7 +175,6 @@ copy = false
 [[config.home.links]]
 label = "X"
 icon = "x"
-tooltip = ""
 copy = false
 
 [[config.home.links]]
