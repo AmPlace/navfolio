@@ -3,6 +3,7 @@ import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import navfolioConfig from '../navfolio.config';
 import { isPageModuleEnabled } from './plugins/config';
+import { normalizeArticleFrontmatter } from './utils/content-frontmatter';
 
 type CollectionSchemaFactory = Extract<
   Parameters<typeof defineCollection>[0]['schema'],
@@ -21,6 +22,10 @@ const remoteImageSchema = z
   .url()
   .refine((src) => /^https?:\/\//i.test(src), 'Remote images must start with http:// or https://');
 
+const publicImageSchema = z
+  .string()
+  .regex(/^\/(?!\/)/, 'Public images must use a root-relative path such as /images/photo.webp');
+
 const siteUrlSchema = z.preprocess((value) => {
   if (typeof value !== 'string') return value;
 
@@ -31,9 +36,9 @@ const siteUrlSchema = z.preprocess((value) => {
 }, z.url());
 
 const contentImageSchema = ({ image }: Parameters<CollectionSchemaFactory>[0]) =>
-  z.union([image(), remoteImageSchema]);
+  z.union([image(), remoteImageSchema, publicImageSchema]);
 
-const articleSchema = ({ image }: Parameters<CollectionSchemaFactory>[0]) =>
+const articleObjectSchema = ({ image }: Parameters<CollectionSchemaFactory>[0]) =>
   z.object({
     title: z.string(),
     description: z.string(),
@@ -49,10 +54,16 @@ const articleSchema = ({ image }: Parameters<CollectionSchemaFactory>[0]) =>
     sidebar: sidebarSchema,
   });
 
+const articleSchema = (context: Parameters<CollectionSchemaFactory>[0]) =>
+  z.preprocess(normalizeArticleFrontmatter, articleObjectSchema(context));
+
 const blogArticleSchema = (context: Parameters<CollectionSchemaFactory>[0]) =>
-  articleSchema(context).extend({
-    sticky: z.union([z.boolean(), z.number().positive()]).optional().default(false),
-  });
+  z.preprocess(
+    normalizeArticleFrontmatter,
+    articleObjectSchema(context).extend({
+      sticky: z.union([z.boolean(), z.number().positive()]).optional().default(false),
+    }),
+  );
 
 const contentSource = process.env.NAVFOLIO_CONTENT_SOURCE === 'docs' ? 'docs' : 'content';
 const contentBase = contentSource === 'docs' ? './src/docs' : './src/content';

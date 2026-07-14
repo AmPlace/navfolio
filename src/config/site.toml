@@ -4,7 +4,7 @@ description = "A personal navigation portfolio starter built with Astro."
 pageTitle = "navfolio | Digital Publication Space"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
 url = "https://astro.navfolio.site"
-repository = "https://github.com/dodolalorc/astro-navfolio"
+repository = "https://github.com/AmPlace/navfolio"
 footerNote = "Released as an open-source starter."
 
 [config.theme]
@@ -118,7 +118,7 @@ handle = "@navfolio"
 role = "A Cat Developer"
 email = "hello@navfolio.site"
 website = "https://astro.navfolio.site/"
-github = "https://github.com/dodolalorc/astro-navfolio"
+github = "https://github.com/AmPlace/navfolio"
 avatar = "/images/logo.png"
 
 [[config.topNav.links]]
@@ -186,18 +186,18 @@ href = "/blog"
 icon = "briefcase"
 title = "Resume"
 subtitle = "Career profile and experience"
-href = "https://github.com/dodolalorc/navfolio"
+href = "https://github.com/AmPlace/navfolio"
 
 [[config.home.navigation]]
 icon = "github"
 title = "Open Source"
 subtitle = "Code, experiments, and tools"
-href = "https://github.com/dodolalorc/astro-navfolio"
+href = "https://github.com/AmPlace/navfolio"
 
 [[config.home.links]]
 label = "GitHub"
 icon = "github"
-tooltip = "https://github.com/dodolalorc/astro-navfolio"
+tooltip = "https://github.com/AmPlace/navfolio"
 copy = false
 
 [[config.home.links]]
