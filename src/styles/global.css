@@ -346,6 +346,11 @@ a {
   vertical-align: middle;
 }
 
+.site-icon--brand {
+  box-sizing: border-box;
+  padding: calc(var(--icon-size) * 0.04);
+}
+
 h1,
 h2,
 h3,

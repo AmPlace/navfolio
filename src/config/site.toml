@@ -137,91 +137,91 @@ showHeatmapLatest = true
 excludeDraft = true
 
 [[config.home.navigation]]
-icon = "compass"
+icon = "lucide:compass"
 title = "Portfolio"
 subtitle = "Selected work and case studies"
 href = "https://astro.navfolio.site/"
 
 [[config.home.navigation]]
-icon = "pen"
+icon = "lucide:pen-line"
 title = "Blog"
 subtitle = "Essays, notes, and field reports"
 href = "/blog"
 
 [[config.home.navigation]]
-icon = "briefcase"
+icon = "lucide:briefcase-business"
 title = "Resume"
 subtitle = "Career profile and experience"
 href = "https://github.com/AmPlace/navfolio"
 
 [[config.home.navigation]]
-icon = "github"
+icon = "simple-icons:github"
 title = "Open Source"
 subtitle = "Code, experiments, and tools"
 href = "https://github.com/AmPlace/navfolio"
 
 [[config.home.links]]
 label = "GitHub"
-icon = "github"
+icon = "simple-icons:github"
 tooltip = "https://github.com/AmPlace/navfolio"
 copy = false
 
 [[config.home.links]]
 label = "LinkedIn"
-icon = "linkedin"
+icon = "lucide:linkedin"
 tooltip = "https://www.linkedin.com/"
 copy = false
 
 [[config.home.links]]
 label = "X"
-icon = "x"
+icon = "simple-icons:x"
 copy = false
 
 [[config.home.links]]
 label = "RSS"
-icon = "rss"
+icon = "lucide:rss"
 tooltip = "/rss.xml"
 copy = false
 
 [[config.home.links]]
 label = "Email"
-icon = "mail"
+icon = "lucide:mail"
 tooltip = "hello@navfolio.site"
 copy = true
 
 [[config.home.links]]
 label = "QQ"
-icon = "qq"
+icon = "simple-icons:qq"
 tooltip = "123456789"
 copy = true
 
 [[config.home.links]]
 label = "WeChat"
-icon = "wechat"
+icon = "simple-icons:wechat"
 tooltip = "navfolio"
 copy = true
 
 [[config.home.links]]
 label = "Weibo"
-icon = "weibo"
+icon = "simple-icons:sinaweibo"
 tooltip = "https://weibo.com/"
 copy = false
 
 [[config.home.links]]
 label = "Xiaohongshu"
-icon = "xiaohongshu"
+icon = "simple-icons:xiaohongshu"
 tooltip = "https://www.xiaohongshu.com/"
 copy = false
 
 [[config.home.links]]
 label = "Zhihu"
-icon = "zhihu"
+icon = "simple-icons:zhihu"
 tooltip = "https://www.zhihu.com/"
 copy = false
 
 [[config.home.links]]
 label = "Bilibili"
-icon = "bilibili"
+icon = "simple-icons:bilibili"
 tooltip = "https://www.bilibili.com/"
 copy = false
 

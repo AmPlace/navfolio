@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { parse } from 'smol-toml';
 
@@ -69,7 +70,7 @@ export default defineConfig({
     remarkPlugins: astroPluginConfig.remarkPlugins,
     rehypePlugins: astroPluginConfig.rehypePlugins,
   },
-  integrations: [...astroPluginConfig.integrations, mdx(), sitemap()],
+  integrations: [...astroPluginConfig.integrations, icon(), mdx(), sitemap()],
 
   vite: {
     plugins: [tailwindcss()],
