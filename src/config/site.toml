@@ -202,8 +202,8 @@ tooltip = "navfolio"
 copy = true
 
 [[config.home.links]]
-label = "Weibo"
-icon = "simple-icons:weibo"
+label = "Telegram"
+icon = "simple-icons:telegram"
 tooltip = "https://weibo.com/"
 copy = false
 
